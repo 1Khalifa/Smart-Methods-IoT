@@ -1,0 +1,206 @@
+body {
+    background-color: #f5f0f3;
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+/* Pulse Shrink Animation */
+@-webkit-keyframes hvr-pulse-shrink {
+    to {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hvr-pulse-shrink {
+    to {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+.hvr-pulse-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+    -webkit-animation-name: hvr-pulse-shrink;
+    animation-name: hvr-pulse-shrink;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.robot {
+    height: 28rem;
+}
+
+.msg {
+    background-color: #0d363f;
+    width: 25rem;
+    height: 10rem;
+    border: 5px solid white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 95% 75%, 0% 75%);
+}
+
+.arrow {
+    background-color: #124c58;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #0d363f solid 5px;
+    border-radius: 15px;
+}
+
+.up {
+    -webkit-clip-path: polygon(0 40%, 0 100%, 100% 100%, 100% 40%, 50% 5%);
+    clip-path: polygon(0 40%, 0 100%, 100% 100%, 100% 40%, 50% 5%);
+}
+
+.down {
+    -webkit-clip-path: polygon(0 60%, 0 0, 100% 0, 100% 60%, 50% 95%);
+    clip-path: polygon(0 60%, 0 0, 100% 0, 100% 60%, 50% 95%);
+}
+
+.left {
+    -webkit-clip-path: polygon(40% 0, 100% 0%, 100% 100%, 40% 100%, 5% 50%);
+    clip-path: polygon(40% 0, 100% 0%, 100% 100%, 40% 100%, 5% 50%);
+}
+
+.right {
+    -webkit-clip-path: polygon(60% 0, 0 0, 0 100%, 60% 100%, 95% 50%);
+    clip-path: polygon(60% 0, 0 0, 0 100%, 60% 100%, 95% 50%);
+}
+
+.stop {
+    background-color: #9e174c;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #4f0c26 solid 4px;
+}
+
+.empty {
+    width: 5rem;
+    height: 5rem;
+}
+
+footer {
+    background-color: #124c58;
+    margin-top: auto;
+}
+
+.control {
+    -webkit-clip-path: circle(14% at 50% 50%);
+    clip-path: circle(40% at 50% 50%);
+    border: #e6e8e8 solid 5px;
+}
+
+#pills-tab .active {
+    background-color: #124c58;
+    color: white;
+}
+
+.nav-link {
+    color: #9e174c;
+}
+
+
+.nav-link:hover {
+    background-color: lightgrey;
+    border-radius: 5px;
+    color: #124c58;
+}
+
+
+/* Range */
+
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 30rem;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #9e174c;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+ input[type="range"]::-webkit-slider-thumb:hover {
+     background-color: white;
+     border: 2px solid #9e174c;
+ }
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+}
+
+.robot-arm{
+    filter: invert(13%) sepia(97%) saturate(2483%) hue-rotate(320deg) brightness(96%) contrast(96%);
+    height: 2rem;
+}
+
+#pills-tab .active .robot-arm{
+    filter: invert(100%) sepia(87%) saturate(50%) hue-rotate(230deg) brightness(109%) contrast(107%);
+    height: 2rem;
+}
+
+.directions{
+    filter: invert(13%) sepia(97%) saturate(2483%) hue-rotate(320deg) brightness(96%) contrast(96%);
+    height: 2rem;
+}
+
+#pills-tab .active .directions{
+    filter: invert(100%) sepia(87%) saturate(50%) hue-rotate(230deg) brightness(109%) contrast(107%);
+    height: 2rem;
+}
+
+.value{
+background-color: #9e174c;
+}
+
+.list-group{
+    width: 50em;
+}
+
+.robot-arm2{
+    height: 15rem;
+}
+
+.bottom{
+    background-color: #9e174c;
+}
+
+.btn{
+    background-color: #f5f0f3;
+}
+
+.btn:hover{
+    background-color: #124c58;
+    color: white;
+}
