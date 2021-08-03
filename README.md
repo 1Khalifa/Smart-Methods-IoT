@@ -1,10 +1,13 @@
 # Robot Control Panel 🕹️ | [Demo Here](https://1khalifa.github.io/Smart-Methods-IoT/demo.html)
-##### Table of Contents  
+#### Table of Contents  
+* [About](https://github.com/1Khalifa/Smart-Methods-IoT#about-this-repository-)  
 * [Task1: Robot Arm](https://github.com/1Khalifa/Smart-Methods-IoT#task1-robot-arm-)  
 * [Task2: Robot Movement](https://github.com/1Khalifa/Smart-Methods-IoT#task2-robot-movement-)  
 * [Task3: Watson Assistant](https://github.com/1Khalifa/Smart-Methods-IoT#task3-watson-assistant-)  
 * [Resources](https://github.com/1Khalifa/Smart-Methods-IoT#resources-)  
 
+## About this repository ❓:
+This repository includes my work on the IoT track during my training program at Smart Methods Company 
 
 ## Task1 Robot Arm 🦾:
 A control panel for a robot arm that has 6 motors. The interface contains range sliders that are used to input the angles for each motor. By clicking the save button the values of the angle are sent to `motors.php` as a `POST` request, then they will be stored in the database.
@@ -24,7 +27,8 @@ An interface to control the direction of the robot movement. By clicking one of 
 ### Mobile  View 📱
 ![Desktop view](/Screenshots/Movement_p.png "Robot Movement Mobile view") 
 
-## Task3 Watson Assistant 🤖:
+## Task3 Watson Assistant 💬:
+This task is based on creating a chatbot to ask questions about the app. This is done by using IBM Waston Assistant.
 ### Screenshots 📷
 ![home](/Screenshots/Watson_home.png) 
 ![about](/Screenshots/Watson_about.png) 
@@ -43,3 +47,5 @@ An interface to control the direction of the robot movement. By clicking one of 
 - https://fontawesome.com
 - https://www.freepik.com
 - https://www.flaticon.com
+- [IBM Cloud Docs](https://cloud.ibm.com/docs?tab=api-docs)
+
