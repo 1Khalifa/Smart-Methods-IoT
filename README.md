@@ -1,4 +1,3 @@
-## Smart-Methods-IoT: Task1, Task2, and Task3
 # Robot Control Panel 🕹️ | [Demo Here](https://1khalifa.github.io/Smart-Methods-IoT/demo.html)
 ## Task1 Robot Arm 🦾:
 A control panel for a robot arm that has 6 motors. The interface contains range sliders that are used to input the angles for each motor. By clicking the save button the values of the angle are sent to `motors.php` as a `POST` request, then they will be stored in the database.
