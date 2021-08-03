@@ -18,11 +18,6 @@
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 
-    <!-- GoogleFonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="images/robot-head.svg">
     <title>Control Panel</title>
@@ -31,23 +26,14 @@
 
 <div class="container g-0 mt-5 justify-content-center">
 
-    <div class="lang mb-3">
-        <span class="me-2 mt-1">English </span>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <span class="ms-2 mt-1 arabic"> العربيـة </span>
-    </div>
-
     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="movementTab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
                     type="button" role="tab" aria-controls="pills-home" aria-selected="true">Robot Movement
                 <img class="directions" src="images/controller.svg"></button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="armTab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
                     type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Robot Arm
                 <img class="robot-arm" src="images/robot-arm.svg"></button>
         </li>
@@ -124,10 +110,10 @@
                             <h4><span class="badge value value6">0</span></h4>
                         </li>
                         <li class="list-group-item d-flex justify-content-end align-items-center bottom">
-                            <button name="save" class="btn btn-light me-2">Save <i
+                            <button name="save"  class="btn btn-light me-2">Save <i
                                     class="fas fa-save"></i>
                             </button>
-                            <button name="switch" class="btn btn-light">Run <i class="fas fa-play"></i>
+                            <button name="switch"  class="btn btn-light">Run <i class="fas fa-play"></i>
                             </button>
                         </li>
                     </ul>
@@ -143,6 +129,16 @@
 </body>
 <script src="script.js"></script>
 <script>
-
+    window.watsonAssistantChatOptions = {
+        integrationID: "46ea18cb-13f7-45bf-b5f4-61dfe548579c", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "47e2608d-3af4-4977-af92-c37729e13315", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+    });
 </script>
 </html>

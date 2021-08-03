@@ -152,10 +152,10 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     transition: .3s ease-in-out;
 }
- input[type="range"]::-webkit-slider-thumb:hover {
-     background-color: white;
-     border: 2px solid #9e174c;
- }
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #9e174c;
+}
 input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1.6);
 }
@@ -181,7 +181,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .value{
-background-color: #9e174c;
+    background-color: #9e174c;
 }
 
 .list-group{
@@ -203,88 +203,4 @@ background-color: #9e174c;
 .btn:hover{
     background-color: #124c58;
     color: white;
-}
-
-
-.lang {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: lightgrey;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-image: url("images/EN.svg");
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
-    border: #ffffff solid 1px;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
-}
-
-.slider:after {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
-    border: #ffffff solid 1px;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-input:checked + .slider:after {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-    background-image: url("images/arabic.svg");
-}
-
-.arabic{
-    font-family: 'Cairo', sans-serif;
 }
