@@ -1,0 +1,380 @@
+{
+  "intents": [
+    {
+      "intent": "about_me",
+      "examples": [
+        {
+          "text": "who built this website?"
+        },
+        {
+          "text": "who made this"
+        },
+        {
+          "text": "who made this app"
+        },
+        {
+          "text": "who made this website"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "gello"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "hii"
+        },
+        {
+          "text": "jello"
+        },
+        {
+          "text": "yello"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "joke",
+      "examples": [
+        {
+          "text": "tell me a joke"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "khalifa",
+      "examples": [
+        {
+          "text": "tell me about khalifa"
+        },
+        {
+          "text": "who's khalifa"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "questions_about_bot",
+      "examples": [
+        {
+          "text": "are you a robot"
+        },
+        {
+          "text": "are you human"
+        },
+        {
+          "text": "what is your name"
+        },
+        {
+          "text": "what's your name"
+        },
+        {
+          "text": "Who are you"
+        },
+        {
+          "text": "you robot"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "questions_about_website",
+      "examples": [
+        {
+          "text": "what does this app do"
+        },
+        {
+          "text": "what does this website do"
+        },
+        {
+          "text": "what is this"
+        },
+        {
+          "text": "what is this app"
+        },
+        {
+          "text": "what is this website"
+        },
+        {
+          "text": "what's the purpose of this app"
+        },
+        {
+          "text": "what's the purpose of this website"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "smart_methods",
+      "examples": [
+        {
+          "text": "about smart methods company"
+        },
+        {
+          "text": "tell me about smart methods"
+        },
+        {
+          "text": "tell me about smart methods company"
+        },
+        {
+          "text": "what is smart methods"
+        },
+        {
+          "text": "what smart methods do"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "whos_there",
+      "examples": [
+        {
+          "text": "who"
+        },
+        {
+          "text": "who's there"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "hello",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, I'm Watson how can I help you?"
+              },
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#greetings",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1625144287406",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Smart Methods is a Saudi company that specialized in automated machines, robots, and artificial intelligence. They offer training opportunities for students and individuals, and they aim to transform the technology generation from users to producers and developers."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#smart_methods",
+      "dialog_node": "node_10_1627973073814",
+      "previous_sibling": "node_7_1627973697430"
+    },
+    {
+      "type": "standard",
+      "title": "khalifa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Khalifa is a software engineering student at KFUPM in his senior year.\nYou can contact him through his email if you have any questions."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#khalifa",
+      "dialog_node": "node_1_1627975048471",
+      "previous_sibling": "node_5_1627972658761"
+    },
+    {
+      "type": "standard",
+      "title": "About",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This website is used as a control panel for a robot"
+              },
+              {
+                "text": "This app is used as a control panel for a robot"
+              },
+              {
+                "text": "This is a control panel for a robot"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#questions_about_website",
+      "dialog_node": "node_2_1625144589402",
+      "previous_sibling": "node_1_1627975048471"
+    },
+    {
+      "type": "standard",
+      "title": "joke answer",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Watson"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1627973697430",
+      "conditions": "#whos_there",
+      "dialog_node": "node_3_1627974439989"
+    },
+    {
+      "type": "standard",
+      "title": "whats on your mind",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What's on your mind?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1627974439989",
+      "conditions": "#whos_there",
+      "dialog_node": "node_3_1627974494563"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Khalifa made this app for Smart Methods Company as a task of their training program"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#about_me",
+      "dialog_node": "node_5_1627972658761",
+      "previous_sibling": "node_10_1627973073814"
+    },
+    {
+      "type": "standard",
+      "title": "Watson",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "My name is Watson, and I'm a Virtual Assistant"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#questions_about_bot",
+      "dialog_node": "node_7_1625144287406",
+      "previous_sibling": "node_2_1625144589402"
+    },
+    {
+      "type": "standard",
+      "title": "joke",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "knock knock "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#joke",
+      "dialog_node": "node_7_1627973697430"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Conversation",
+  "language": "xx",
+  "description": ""
+}
